@@ -1,0 +1,258 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+}
+
+body{
+    width: 100%;
+    height: 110vh;
+    padding: 3rem;
+}
+
+.main-content{
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 30px;
+}
+
+.main-content .title{
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 1.2;
+}
+
+.main-content .table-content{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.table-content .periodic-table{
+    background-color: #fbfbfb;
+    border-radius: 20px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+    flex: 0.8;
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.periodic-table .elements{
+    display: grid;
+    place-content: center;
+    gap: 20px;
+    grid-template-columns: repeat(4,110px);
+    grid-template-rows: repeat(5, 110px);
+    width: 100%; height: 100%;
+}
+
+.elements .element{
+    padding: 5px 10px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: 5px;
+    border: 1px solid #333;
+    transition: all 0.3s ease 0s;
+}
+
+.elements .element:hover{
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+
+.element.g13{
+    background-color: #ADDFEC;
+}
+
+.element.g14{
+    background-color: #9FE5D3;
+}
+
+.element.g15{
+    background-color: #8CED8C;
+}
+
+.element.g16{
+    background-color: #E6BCE6;
+}
+
+.element.selected{
+    z-index: -10;
+}
+
+.element .atomic-number{
+    margin-bottom: 0;
+    font-size: 17px;
+    line-height: 0.8;
+}
+
+.element .symbol{
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 1.3;
+}
+
+.element .element-name{
+    font-size: 17px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.element .element-mass{
+    font-size: 16px;
+    line-height: 1;
+    margin-top: 8px;
+}
+
+.element-info{
+    width: 100%; height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 70px;
+}
+
+
+.bottom-info{
+    width: 400px; height: fit-content;
+    padding: 1rem;
+    border-radius: 20px;
+    background-color: #9a9a9a;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.option{
+    width: 70px;
+    height: 70px;
+    border-radius: 10px;
+    font-size: 16px;
+    padding: 7px;
+    background-color: #dfdfdf;
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+}
+
+.option:hover{
+    background-color: #bfbfbf;
+}
+
+.option.selected{
+    background-color: #343434;
+    color: #6a6a6a;
+}
+
+.element-card.activated{
+    box-shadow: 10px 8px rgba(0,0,0,0.6);
+}
+
+.element-card .default{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #454545;
+}
+
+.element-card{
+    width: 400px;
+    height: 450px;
+    background-color: #dadada;
+    border-radius: 20px;
+    box-shadow: 7px 5px rgba(0,0,0,0.5);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 3rem;
+    transition: all 0.3s ease 0s;
+    position: relative;
+}
+
+.element-card.activated{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.element-card .atomic-number{
+    font-size: 2.5rem;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+.element-card .symbol{
+    font-size: 5rem;
+    font-weight: 800;
+    line-height: 1.8;
+}
+
+.element-card .element-name{
+    font-size: 2.5rem;
+    font-weight: 500;
+    line-height: 0.5;
+    margin-bottom: 30px;
+}
+
+.element-card .element-mass{
+    font-size: 2rem;
+    font-weight: 400;
+    color: #343434;
+    margin-bottom: 10px;
+}
+
+.element-card .element-en{
+    font-size: 1.8rem;
+    font-size: 500;
+    color: #545454;
+}
+
+.element-card .element-electrons{
+    position: absolute;
+    top: 2rem;
+    right: 3rem;
+}
+
+.element-electrons li{
+    font-size: 1.5rem;
+    color: #343434;
+}
+
+.table-content .right-section{
+    background-color: #fff;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+
+    flex: 0.2;
+    border-radius: 10px;
+    padding: 3rem 1rem;
+}
+
+.right-section .litle-title{
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.right-section textarea{
+    width: 100%;
+    height: 80%;
+    resize: none;
+    border: 1px solid #bbb;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 1rem;
+}
+
