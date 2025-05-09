@@ -192,19 +192,36 @@ elementsArray.forEach((element) =>{
         electronsList += `<li>${num}</li>`
     }
 
-    elementObject.addEventListener('mouseenter', ()=>{
-        elementCard.classList.add('activated');
-        elementCard.innerHTML = `
-                                <p class="atomic-number">${element.an}</p>
-                                <h4 class="symbol">${element.symbol}</h4>
-                                <p class="element-name">${element.name}</p>
-                                <p class="element-mass">${element.am}</p>
-                                <p class="element-en">${element.en}</p>
-                                <ul class="element-electrons">
-                                    ${electronsList}
-                                </ul>
-                                `
-    });
+    if (window.innerWidth > 900) {
+        elementObject.addEventListener('mouseenter', ()=>{
+            elementCard.classList.add('activated');
+            elementCard.innerHTML = `
+                                    <p class="atomic-number">${element.an}</p>
+                                    <h4 class="symbol">${element.symbol}</h4>
+                                    <p class="element-name">${element.name}</p>
+                                    <p class="element-mass">${element.am}</p>
+                                    <p class="element-en">${element.en}</p>
+                                    <ul class="element-electrons">
+                                        ${electronsList}
+                                    </ul>
+                                    `
+        });
+    } else {
+        elementObject.addEventListener('click', ()=>{
+            elementCard.classList.add('activated');
+            elementCard.innerHTML = `
+                                    <p class="atomic-number">${element.an}</p>
+                                    <h4 class="symbol">${element.symbol}</h4>
+                                    <p class="element-name">${element.name}</p>
+                                    <p class="element-mass">${element.am}</p>
+                                    <p class="element-en">${element.en}</p>
+                                    <ul class="element-electrons">
+                                        ${electronsList}
+                                    </ul>
+                                    `
+        });
+    }
+
 
     elementObject.innerHTML = `
                                 <p class="atomic-number">${element.an}</p>

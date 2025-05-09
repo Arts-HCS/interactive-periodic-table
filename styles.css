@@ -256,3 +256,129 @@ body{
     font-size: 1rem;
 }
 
+@media screen and (max-width: 1200px){
+    body{
+        height: fit-content;
+    }
+    .main-content .table-content{
+        flex-direction: column;
+    }
+    .periodic-table{
+        flex-direction: column;
+        gap: 50px;
+    }
+}
+
+
+@media screen and (max-width: 640px){
+    .main-content .title{
+        font-size: 2rem;
+        text-align: center;
+    }
+    .periodic-table .elements{
+        gap: 20px;
+        grid-template-columns: repeat(4,80px);
+        grid-template-rows: repeat(5, 80px);
+    }
+    .elements .element{
+        padding: 3px 7px;
+    }
+
+    .element .atomic-number{
+        font-size: 15px;
+        line-height: 0.8;
+    }
+    
+    .element .symbol{
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 1.3;
+    }
+    
+    .element .element-name{
+        font-size: 13px;
+        line-height: 1;
+        font-weight: 500;
+    }
+    
+    .element .element-mass{
+        font-size: 14px;
+        line-height: 1;
+        margin-top: 8px;
+    }
+    .element-card{
+        width: 280px;
+        height: 400px;
+        padding: 2rem;
+    }
+    .element-card .atomic-number{
+        font-size: 2rem;
+    }
+    
+    .element-card .symbol{
+        font-size: 4rem;
+        font-weight: 800;
+        line-height: 1.8;
+    }
+    
+    .element-card .element-name{
+        font-size: 2.2rem;
+        font-weight: 500;
+        line-height: 0.5;
+        margin-bottom: 30px;
+    }
+    
+    .element-card .element-mass{
+        font-size: 1.8rem;
+        font-weight: 400;
+        color: #343434;
+        margin-bottom: 10px;
+    }
+    .element-card .element-en{
+        font-size: 1.5rem;
+        font-size: 500;
+        color: #545454;
+    }
+    
+    .element-card .element-electrons{
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+    }
+    
+    .element-electrons li{
+        font-size: 1.3rem;
+        color: #343434;
+    }
+    .bottom-info{
+        width: 300px; 
+        padding: 0.8rem;
+    }
+    
+    .option{
+        width: 60px;
+        height: 60px;
+        font-size: 15px;
+        padding: 7px;
+        background-color: #dfdfdf;
+        transition: all 0.3s ease 0s;
+        cursor: pointer;
+    }
+    .table-content .right-section{
+       display: none;
+    }
+
+}
+
+@media screen and (max-width: 500px){
+    .table-content .periodic-table{
+        background-color: transparent;
+        box-shadow: none;
+    }
+    .periodic-table .elements {
+        grid-template-columns: repeat(2, 110px); 
+        grid-template-rows: auto; 
+        justify-content: center; 
+    }
+
+}
