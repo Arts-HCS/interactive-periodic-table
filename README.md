@@ -19,13 +19,13 @@ This is a mini interactive periodic table built with **HTML**, **CSS**, and **Ja
 
 ---
 
-## 🧪 Demo
+## Demo
 
 https://arts-hcs.github.io/interactive-periodic-table/
 
 ---
 
-## 🖼️ Preview
+## Preview
 
 <img width="1470" height="800" alt="Screenshot 2025-07-29 at 21 23 41" src="https://github.com/user-attachments/assets/d8a7c3ea-f35e-4cc9-bebc-fa32689f39c4" />
 
@@ -42,7 +42,7 @@ https://arts-hcs.github.io/interactive-periodic-table/
 
 ---
 
-## 🚀 Getting Started
+## Getting Started
 
 ### 1. Clone the repository
 
